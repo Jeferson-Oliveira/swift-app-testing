@@ -21,6 +21,8 @@
 		ABED615423EC863E00540BAF /* AlamofireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615323EC863E00540BAF /* AlamofireBaseService.swift */; };
 		ABED615623EC889900540BAF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615523EC889900540BAF /* Post.swift */; };
 		ABED615C23EC8E4D00540BAF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615B23EC8E4D00540BAF /* TableViewController.swift */; };
+		ABED615E23EC9B2A00540BAF /* PostTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615D23EC9B2A00540BAF /* PostTest.swift */; };
+		ABED616023EC9B3A00540BAF /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615F23EC9B3A00540BAF /* Endpoints.swift */; };
 		C7B36A67DE42755AACA4A7C8 /* Pods_AppTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E931642519D10E5D095A3ADB /* Pods_AppTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 		3E5C48F0D650872B47C54E5B /* Pods_AppTest_AppTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTest_AppTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		590216A86343CA997FC5EB61 /* Pods_AppTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		694B9756528C1049793AF016 /* Pods-AppTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest.release.xcconfig"; path = "Target Support Files/Pods-AppTest/Pods-AppTest.release.xcconfig"; sourceTree = "<group>"; };
+		AB5DD81C23EC9D1700CC302E /* AppTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppTest.entitlements; sourceTree = "<group>"; };
 		ABD7424B23EC7CCC009F742C /* AppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD7424E23EC7CCC009F742C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABD7425023EC7CCC009F742C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 		ABED615323EC863E00540BAF /* AlamofireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireBaseService.swift; sourceTree = "<group>"; };
 		ABED615523EC889900540BAF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ABED615B23EC8E4D00540BAF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ABED615D23EC9B2A00540BAF /* PostTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTest.swift; sourceTree = "<group>"; };
+		ABED615F23EC9B3A00540BAF /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		CB8E5752BC402E3F3CE887CD /* Pods-AppTest-AppTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest-AppTestUITests.release.xcconfig"; path = "Target Support Files/Pods-AppTest-AppTestUITests/Pods-AppTest-AppTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D68850B42C6D3C76A05B457F /* Pods-AppTest-AppTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest-AppTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppTest-AppTestUITests/Pods-AppTest-AppTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E931642519D10E5D095A3ADB /* Pods_AppTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +152,7 @@
 		ABD7424D23EC7CCC009F742C /* AppTest */ = {
 			isa = PBXGroup;
 			children = (
+				AB5DD81C23EC9D1700CC302E /* AppTest.entitlements */,
 				ABED615A23EC8DBE00540BAF /* App */,
 				ABED615923EC8DB200540BAF /* View */,
 				ABED614E23EC843600540BAF /* Model */,
@@ -161,6 +167,7 @@
 			children = (
 				ABD7426523EC7CD0009F742C /* AppTestTests.swift */,
 				ABD7426723EC7CD0009F742C /* Info.plist */,
+				ABED615D23EC9B2A00540BAF /* PostTest.swift */,
 			);
 			path = AppTestTests;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 			children = (
 				ABED615823EC8D9500540BAF /* Entity */,
 				ABED615723EC8D8800540BAF /* Service */,
+				ABED615F23EC9B3A00540BAF /* Endpoints.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,6 +491,7 @@
 				ABED615423EC863E00540BAF /* AlamofireBaseService.swift in Sources */,
 				ABED615223EC845D00540BAF /* BaseServiceProtocol.swift in Sources */,
 				ABED615623EC889900540BAF /* Post.swift in Sources */,
+				ABED616023EC9B3A00540BAF /* Endpoints.swift in Sources */,
 				ABED615023EC845400540BAF /* PostService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD7426623EC7CD0009F742C /* AppTestTests.swift in Sources */,
+				ABED615E23EC9B2A00540BAF /* PostTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -642,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -657,6 +667,7 @@
 			baseConfigurationReference = F9323FF0A81FC9E37CB4ECAB /* Pods-AppTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppTest/AppTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 296LD5L9TC;
 				INFOPLIST_FILE = AppTest/Info.plist;
@@ -666,6 +677,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.jeferson.AppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -676,6 +688,7 @@
 			baseConfigurationReference = 694B9756528C1049793AF016 /* Pods-AppTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppTest/AppTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 296LD5L9TC;
 				INFOPLIST_FILE = AppTest/Info.plist;
@@ -685,6 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.jeferson.AppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

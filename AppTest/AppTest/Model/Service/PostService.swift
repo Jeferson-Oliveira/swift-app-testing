@@ -18,7 +18,7 @@ class PostService: AlamofireBaseService {
 
 extension PostService: PostServiceProtocol {
     func getPosts(completion: @escaping (Result<[Post]>) -> Void) {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string: Endpoints.Posts.list.url()) else { return }
         request(url, method: .get, completion: completion)
     }
 }
