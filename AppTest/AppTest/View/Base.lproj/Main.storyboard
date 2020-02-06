@@ -45,7 +45,7 @@
                             <outlet property="delegate" destination="PkK-tp-Jtj" id="XuJ-M6-t3G"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Pit-sp-8P1"/>
+                    <navigationItem key="navigationItem" title="Posts" id="Pit-sp-8P1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bjz-tJ-WvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
