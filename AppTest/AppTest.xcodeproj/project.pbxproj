@@ -11,12 +11,16 @@
 		A6816D7FEA685892F0F2C779 /* Pods_AppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590216A86343CA997FC5EB61 /* Pods_AppTest.framework */; };
 		ABD7424F23EC7CCC009F742C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7424E23EC7CCC009F742C /* AppDelegate.swift */; };
 		ABD7425123EC7CCC009F742C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7425023EC7CCC009F742C /* SceneDelegate.swift */; };
-		ABD7425323EC7CCC009F742C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7425223EC7CCC009F742C /* ViewController.swift */; };
 		ABD7425623EC7CCC009F742C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD7425423EC7CCC009F742C /* Main.storyboard */; };
 		ABD7425823EC7CD0009F742C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD7425723EC7CD0009F742C /* Assets.xcassets */; };
 		ABD7425B23EC7CD0009F742C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD7425923EC7CD0009F742C /* LaunchScreen.storyboard */; };
 		ABD7426623EC7CD0009F742C /* AppTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7426523EC7CD0009F742C /* AppTestTests.swift */; };
 		ABD7427123EC7CD0009F742C /* AppTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7427023EC7CD0009F742C /* AppTestUITests.swift */; };
+		ABED615023EC845400540BAF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED614F23EC845400540BAF /* PostService.swift */; };
+		ABED615223EC845D00540BAF /* BaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615123EC845D00540BAF /* BaseServiceProtocol.swift */; };
+		ABED615423EC863E00540BAF /* AlamofireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615323EC863E00540BAF /* AlamofireBaseService.swift */; };
+		ABED615623EC889900540BAF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615523EC889900540BAF /* Post.swift */; };
+		ABED615C23EC8E4D00540BAF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABED615B23EC8E4D00540BAF /* TableViewController.swift */; };
 		C7B36A67DE42755AACA4A7C8 /* Pods_AppTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E931642519D10E5D095A3ADB /* Pods_AppTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +48,6 @@
 		ABD7424B23EC7CCC009F742C /* AppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD7424E23EC7CCC009F742C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABD7425023EC7CCC009F742C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABD7425223EC7CCC009F742C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABD7425523EC7CCC009F742C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABD7425723EC7CD0009F742C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABD7425A23EC7CD0009F742C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +58,11 @@
 		ABD7426C23EC7CD0009F742C /* AppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD7427023EC7CD0009F742C /* AppTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTestUITests.swift; sourceTree = "<group>"; };
 		ABD7427223EC7CD0009F742C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABED614F23EC845400540BAF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		ABED615123EC845D00540BAF /* BaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceProtocol.swift; sourceTree = "<group>"; };
+		ABED615323EC863E00540BAF /* AlamofireBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireBaseService.swift; sourceTree = "<group>"; };
+		ABED615523EC889900540BAF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		ABED615B23EC8E4D00540BAF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CB8E5752BC402E3F3CE887CD /* Pods-AppTest-AppTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest-AppTestUITests.release.xcconfig"; path = "Target Support Files/Pods-AppTest-AppTestUITests/Pods-AppTest-AppTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D68850B42C6D3C76A05B457F /* Pods-AppTest-AppTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTest-AppTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppTest-AppTestUITests/Pods-AppTest-AppTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E931642519D10E5D095A3ADB /* Pods_AppTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,11 +147,9 @@
 		ABD7424D23EC7CCC009F742C /* AppTest */ = {
 			isa = PBXGroup;
 			children = (
-				ABD7424E23EC7CCC009F742C /* AppDelegate.swift */,
-				ABD7425023EC7CCC009F742C /* SceneDelegate.swift */,
-				ABD7425223EC7CCC009F742C /* ViewController.swift */,
-				ABD7425423EC7CCC009F742C /* Main.storyboard */,
-				ABD7425723EC7CD0009F742C /* Assets.xcassets */,
+				ABED615A23EC8DBE00540BAF /* App */,
+				ABED615923EC8DB200540BAF /* View */,
+				ABED614E23EC843600540BAF /* Model */,
 				ABD7425923EC7CD0009F742C /* LaunchScreen.storyboard */,
 				ABD7425C23EC7CD0009F742C /* Info.plist */,
 			);
@@ -166,6 +172,52 @@
 				ABD7427223EC7CD0009F742C /* Info.plist */,
 			);
 			path = AppTestUITests;
+			sourceTree = "<group>";
+		};
+		ABED614E23EC843600540BAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABED615823EC8D9500540BAF /* Entity */,
+				ABED615723EC8D8800540BAF /* Service */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABED615723EC8D8800540BAF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ABED615123EC845D00540BAF /* BaseServiceProtocol.swift */,
+				ABED615323EC863E00540BAF /* AlamofireBaseService.swift */,
+				ABED614F23EC845400540BAF /* PostService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ABED615823EC8D9500540BAF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ABED615523EC889900540BAF /* Post.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		ABED615923EC8DB200540BAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABD7425423EC7CCC009F742C /* Main.storyboard */,
+				ABED615B23EC8E4D00540BAF /* TableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABED615A23EC8DBE00540BAF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ABD7424E23EC7CCC009F742C /* AppDelegate.swift */,
+				ABD7425023EC7CCC009F742C /* SceneDelegate.swift */,
+				ABD7425723EC7CD0009F742C /* Assets.xcassets */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,9 +477,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD7425323EC7CCC009F742C /* ViewController.swift in Sources */,
 				ABD7424F23EC7CCC009F742C /* AppDelegate.swift in Sources */,
 				ABD7425123EC7CCC009F742C /* SceneDelegate.swift in Sources */,
+				ABED615C23EC8E4D00540BAF /* TableViewController.swift in Sources */,
+				ABED615423EC863E00540BAF /* AlamofireBaseService.swift in Sources */,
+				ABED615223EC845D00540BAF /* BaseServiceProtocol.swift in Sources */,
+				ABED615623EC889900540BAF /* Post.swift in Sources */,
+				ABED615023EC845400540BAF /* PostService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
