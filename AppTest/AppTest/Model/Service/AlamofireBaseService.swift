@@ -23,15 +23,15 @@ class AlamofireBaseService: BaseServiceProtocol {
                           encoding: encoding,
                           headers: headers)
                  .responseJSON(completionHandler: { (response) in
-                    if let resposeData = response.data {
+                    if let error = response.error {
+                      completion(.error(error))
+                    } else if let resposeData = response.data {
                         do {
                             let value = try JSONDecoder().decode(T.self, from: resposeData)
                             completion(.success(value))
                         } catch {
                             completion(.error(error))
                         }
-                  } else if let error = response.error {
-                    completion(.error(error))
                   }
                })
     }

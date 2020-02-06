@@ -166,8 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				ABD7426523EC7CD0009F742C /* AppTestTests.swift */,
-				ABD7426723EC7CD0009F742C /* Info.plist */,
 				ABED615D23EC9B2A00540BAF /* PostTest.swift */,
+				ABD7426723EC7CD0009F742C /* Info.plist */,
 			);
 			path = AppTestTests;
 			sourceTree = "<group>";
