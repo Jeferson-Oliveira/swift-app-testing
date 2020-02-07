@@ -32,10 +32,10 @@ protocol PostPresenterOutputDelegate: class {
 class PostPresenter: PostPresenterProtocol {
     
     var inputs: PostsPresenterInput { self }
-    var service: PostServiceProtocol
+    private var service: PostServiceProtocol
     weak var delegate: PostPresenterOutputDelegate?
     
-    var posts = [Post]() {
+    private var posts = [Post]() {
         didSet {
             delegate?.postsDidChange(posts)
         }
@@ -44,6 +44,20 @@ class PostPresenter: PostPresenterProtocol {
     init(service: PostServiceProtocol = PostService(), delegate: PostPresenterOutputDelegate? = nil) {
         self.service = service
         self.delegate = delegate
+    }
+    
+    private func shouldAddPost(_ post: Post) -> Bool {
+        if post.title == "" || post.body == "" {
+            return false
+        }
+        return true
+    }
+    
+    private func shouldDelete(_ post: Post) -> Bool {
+        if post.id == .zero {
+            return false
+        }
+        return true
     }
 }
 
@@ -64,28 +78,36 @@ extension PostPresenter: PostsPresenterInput {
     }
     
     func addPost(_ post: Post) {
-        delegate?.startLoading()
-        service.add(post) { [weak self] result in
-            switch result {
-            case .success(let newPost):
-                self?.posts.append(newPost)
-            case .error(let error):
-                self?.delegate?.showFeedback(message: error.localizedDescription)
+        if shouldAddPost(post) {
+            delegate?.startLoading()
+            service.add(post) { [weak self] result in
+                switch result {
+                case .success(let newPost):
+                    self?.posts.append(newPost)
+                case .error(let error):
+                    self?.delegate?.showFeedback(message: error.localizedDescription)
+                }
+                self?.delegate?.endLoading()
             }
-            self?.delegate?.endLoading()
+        } else {
+            delegate?.showFeedback(message: "Invalid Post")
         }
     }
     
     func deletePost(_ post: Post) {
-        delegate?.startLoading()
-        service.delete(post) { [weak self] result in
-            switch result {
-            case .success:
-                self?.posts.removeAll(where: { $0.id == post.id})
-            case .error(let error):
-                self?.delegate?.showFeedback(message: error.localizedDescription)
+        if shouldDelete(post) {
+            delegate?.startLoading()
+            service.delete(post) { [weak self] result in
+                switch result {
+                case .success:
+                    self?.posts.removeAll(where: { $0.id == post.id})
+                case .error(let error):
+                    self?.delegate?.showFeedback(message: error.localizedDescription)
+                }
+                self?.delegate?.endLoading()
             }
-            self?.delegate?.endLoading()
+        } else {
+            delegate?.showFeedback(message: "Invalid Post")
         }
     }
     

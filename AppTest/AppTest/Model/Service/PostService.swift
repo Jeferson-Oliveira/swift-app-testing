@@ -42,7 +42,7 @@ extension PostService: PostServiceProtocol {
     
     func update(_ post: Post, completion: @escaping (Result<Post>) -> Void) {
         guard
-            let url = URL(string: Endpoints.Posts.update(post.id).url()),
+            let url = URL(string: Endpoints.Posts.update(post.id ?? .zero).url()),
             let params = encodeParam(post) else { return }
         request(url,
                 method: .put,
@@ -54,7 +54,7 @@ extension PostService: PostServiceProtocol {
     
     func delete(_ post: Post, completion: @escaping (Result<NoResult>) -> Void) {
         guard
-            let url = URL(string: Endpoints.Posts.delete(post.id).url()) else { return }
+            let url = URL(string: Endpoints.Posts.delete(post.id ?? .zero).url()) else { return }
         request(url,
                 method: .delete,
                 completion: completion)
