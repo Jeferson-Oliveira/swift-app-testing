@@ -15,7 +15,6 @@ import Mockingjay
 class PostServiceTest: QuickSpec {
     override func spec() {
         
-        
         let error = NSError.init(domain: "test", code: 1, userInfo: nil)
         
         describe("Post Service Test") {
@@ -37,14 +36,18 @@ class PostServiceTest: QuickSpec {
                                  "body": "Teste Body" ] as [String : Any]
                     
                     self.stub(http(.get, uri: Endpoints.Posts.list.url()), json([object, object]))
-                    service.getPosts(completion: { result in
+                    
+                    // When
+                    service.list { result in
                         switch result {
                         case .success(let posts):
                             response = posts
                         case .error(let error):
                             fail(error.localizedDescription)
                         }
-                    })
+                    }
+                    
+                    // Then
                     expect(response).toEventuallyNot(beNil())
                 }
                 
@@ -54,14 +57,14 @@ class PostServiceTest: QuickSpec {
                     var response: Error?
                     
                     // When
-                    service.getPosts(completion: { result in
+                    service.list { result in
                         switch result {
                         case .success:
                             fail("Error not returned")
                         case .error(let error):
                             response = error
                         }
-                    })
+                    }
                     
                     // Then
                     expect(response).toEventuallyNot(beNil())
@@ -75,14 +78,14 @@ class PostServiceTest: QuickSpec {
                     self.stub(http(.get, uri: Endpoints.Posts.list.url()), json(object))
                     
                     // When
-                    service.getPosts(completion: { result in
+                    service.list { result in
                         switch result {
                         case .success:
                             fail("Error not returned")
                         case .error(let error):
                             response = error
                         }
-                    })
+                    }
                     
                     // Then
                     expect(response).toEventuallyNot(beNil())

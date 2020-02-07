@@ -10,35 +10,23 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var posts: [Post] = []
+    var presenter: PostPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = PostPresenter(delegate: self)
+        presenter.inputs.loadPosts()
         setupRefreshControl()
-        getPosts()
     }
 
-    private func getPosts() {
-        refreshControl?.beginRefreshing()
-        PostService().getPosts(completion: { [weak self] result in
-            switch result {
-             case .success(let posts):
-                 self?.posts = posts
-                 self?.tableView.reloadData()
-             case .error(let error):
-                 self?.showAlertViewController(message: error.localizedDescription)
-            }
-            self?.refreshControl?.endRefreshing()
-         })
-    }
-    
     private func setupRefreshControl() {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(TableViewController.refreshControlAction), for: .valueChanged)
     }
     
     @objc func refreshControlAction() {
-        getPosts()
+        presenter.inputs.loadPosts()
     }
     
      func showAlertViewController(message: String) {
@@ -48,29 +36,50 @@ class TableViewController: UITableViewController {
          present(alert, animated: true, completion: nil)
      }
     
-    // MARK: - Table view data source
+}
+
+// MARK: TableView Delegates
+extension TableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return presenter.inputs.getPostsCount()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let post = presenter.inputs.getPost(indexPath.row) else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = posts[indexPath.row].title
-        cell.detailTextLabel?.text = posts[indexPath.row].body
+        cell.textLabel?.text = post.title
+        cell.detailTextLabel?.text = post.body
         return cell
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            guard let postToBeDeletedIndex =  posts.firstIndex(where: {$0.id == posts[indexPath.row].id }) else {return}
-            posts.remove(at: postToBeDeletedIndex)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            guard let post = presenter.inputs.getPost(indexPath.row) else {return}
+            presenter.inputs.deletePost(post)
         }
     }
+}
 
+// MARK: ViewModel Outputs
+extension TableViewController: PostPresenterOutputDelegate {
+    func startLoading() {
+        refreshControl?.beginRefreshing()
+    }
+    
+    func endLoading() {
+        refreshControl?.endRefreshing()
+    }
+    
+    func postsDidChange(_ posts: [Post]) {
+        tableView.reloadData()
+    }
+    
+    func showFeedback(message: String) {
+        showAlertViewController(message: message)
+    }
 }

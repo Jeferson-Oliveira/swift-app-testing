@@ -8,12 +8,29 @@
 
 import Foundation
 
+struct API {
+    static let baseUrl = "https://jsonplaceholder.typicode.com/posts"
+}
+
 enum Endpoints {
-    enum Posts: String {
-        case list = "https://jsonplaceholder.typicode.com/posts"
+    enum Posts {
+        
+        case list
+        case add
+        case update(Int)
+        case delete(Int)
         
         func url() -> String {
-            return self.rawValue
+            switch self {
+            case .add:
+                return API.baseUrl
+            case .list:
+                return API.baseUrl
+            case .update(let id):
+                return "\(API.baseUrl)/\(id)"
+            case .delete(let id):
+                return "\(API.baseUrl)/\(id)"
+            }
         }
     }
 }

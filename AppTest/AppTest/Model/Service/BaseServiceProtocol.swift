@@ -9,10 +9,11 @@
 import Foundation
 import Alamofire
 
+
 typealias JsonObject = [String : Any]
 
 protocol BaseServiceProtocol {
-    func request<T>(
+    func request<T: Codable>(
             _ url: URL,
             method: HTTPMethod,
             parameters: [String: Any]?,
@@ -23,7 +24,9 @@ protocol BaseServiceProtocol {
 
 }
 
-enum Result<T : Codable> {
+struct NoResult: Codable {}
+
+enum Result<T : Decodable> {
     case success(T)
     case error(Error)
 }

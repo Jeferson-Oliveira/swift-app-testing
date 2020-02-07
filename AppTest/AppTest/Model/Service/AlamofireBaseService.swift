@@ -10,7 +10,11 @@ import Alamofire
 
 class AlamofireBaseService: BaseServiceProtocol {
     
-    func request<T>(_ url: URL,
+    func encodeParam<T: Encodable>(_ object: T) -> Parameters? {
+        return object.dictionary
+    }
+    
+    func request<T: Encodable>(_ url: URL,
                  method: HTTPMethod,
                  parameters: [String : Any]? = nil,
                  headers: [String : String]? = nil,
