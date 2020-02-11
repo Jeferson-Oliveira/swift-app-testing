@@ -14,7 +14,6 @@
 		60018FBBF87BDA0A214DFDFE /* Pods_AppTest_AppTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5C48F0D650872B47C54E5B /* Pods_AppTest_AppTestUITests.framework */; };
 		A6816D7FEA685892F0F2C779 /* Pods_AppTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590216A86343CA997FC5EB61 /* Pods_AppTest.framework */; };
 		ABD7424F23EC7CCC009F742C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7424E23EC7CCC009F742C /* AppDelegate.swift */; };
-		ABD7425123EC7CCC009F742C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7425023EC7CCC009F742C /* SceneDelegate.swift */; };
 		ABD7425623EC7CCC009F742C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD7425423EC7CCC009F742C /* Main.storyboard */; };
 		ABD7425823EC7CD0009F742C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD7425723EC7CD0009F742C /* Assets.xcassets */; };
 		ABD7425B23EC7CD0009F742C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD7425923EC7CD0009F742C /* LaunchScreen.storyboard */; };
@@ -57,7 +56,6 @@
 		AB5DD81C23EC9D1700CC302E /* AppTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppTest.entitlements; sourceTree = "<group>"; };
 		ABD7424B23EC7CCC009F742C /* AppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD7424E23EC7CCC009F742C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ABD7425023EC7CCC009F742C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ABD7425523EC7CCC009F742C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABD7425723EC7CD0009F742C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABD7425A23EC7CD0009F742C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -263,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				ABD7424E23EC7CCC009F742C /* AppDelegate.swift */,
-				ABD7425023EC7CCC009F742C /* SceneDelegate.swift */,
 				ABD7425723EC7CD0009F742C /* Assets.xcassets */,
 			);
 			path = App;
@@ -527,7 +524,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD7424F23EC7CCC009F742C /* AppDelegate.swift in Sources */,
-				ABD7425123EC7CCC009F742C /* SceneDelegate.swift in Sources */,
 				ABED615C23EC8E4D00540BAF /* TableViewController.swift in Sources */,
 				ABED615423EC863E00540BAF /* AlamofireBaseService.swift in Sources */,
 				ABED615223EC845D00540BAF /* BaseServiceProtocol.swift in Sources */,
@@ -716,6 +712,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 296LD5L9TC;
 				INFOPLIST_FILE = AppTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -739,6 +736,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 296LD5L9TC;
 				INFOPLIST_FILE = AppTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
